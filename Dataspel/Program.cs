@@ -10,11 +10,13 @@ namespace Dataspel
         {
             string search;
 
+            //Lista med spel
             Dataspel fortnite = new("Multiplayer", "Shooter", "Fortnite");
             Dataspel ark = new("Singleplayer", "Survival", "Ark");
             Dataspel csgo = new("Multiplayer", "Shooter", "Csgo");
             Dataspel amongus = new("Multiplayer", "Strategy", "Among us");
 
+            //Sök efter spel
             Console.WriteLine("Search for game: ");
             search = Console.ReadLine();
             spel();

@@ -17,18 +17,27 @@ namespace Dataspel
 
             Console.WriteLine("Search for game: ");
             search = Console.ReadLine();
+            spel();
 
-            foreach (Dataspel spel in new Dataspel[] { fortnite, ark, csgo,  })
+            void spel()
             {
-                if (search == spel.namn)
+                foreach (Dataspel spel in new Dataspel[] { fortnite, ark, csgo, amongus })
                 {
-                    Console.WriteLine("\nNamn: " + spel.namn + "\nGenre: " + spel.genre + "\nSpelarläge: " + spel.spelarläge);
+                    if (search == spel.namn)
+                    {
+                        Console.WriteLine("\nNamn: " + spel.namn + "\nGenre: " + spel.genre + "\nSpelarläge: " + spel.spelarläge);
+                    }
+                    else if (search != spel.namn)
+                    {
+                        Console.Write("");
+                    }
                 }
-                else if (search != spel.namn)
-                {
-                    Console.Write("");
-                }
+
+                Console.WriteLine("\nSearch for game: ");
+                search = Console.ReadLine();
+                spel();
             }
+
         }
     }
 }

@@ -6,17 +6,19 @@ namespace Dataspel
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string search;
 
-            Dataspel fortnite = new Dataspel("Multiplayer", "Shooter", "Fortnite");
-            Dataspel ark = new Dataspel("Singleplayer", "Survival", "Ark");
+            Dataspel fortnite = new("Multiplayer", "Shooter", "Fortnite");
+            Dataspel ark = new("Singleplayer", "Survival", "Ark");
+            Dataspel csgo = new("Multiplayer", "Shooter", "Csgo");
+            Dataspel amongus = new("Multiplayer", "Strategy", "Among us");
 
             Console.WriteLine("Search for game: ");
             search = Console.ReadLine();
 
-            foreach (Dataspel spel in new Dataspel[] { fortnite, ark })
+            foreach (Dataspel spel in new Dataspel[] { fortnite, ark, csgo,  })
             {
                 if (search == spel.namn)
                 {

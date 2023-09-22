@@ -8,11 +8,11 @@ namespace Dataspel
         public string genre;
         public string namn;
 
-        public Dataspel(string Aspelarläge, string Agenre, string Anamn)
+        public Dataspel(string Spelarläge, string Genre, string Namn)
         {
-            spelarläge = Aspelarläge;
-            genre = Agenre;
-            namn = Anamn;
+            spelarläge = Spelarläge;
+            genre = Genre;
+            namn = Namn;
         }  
     }
 }
